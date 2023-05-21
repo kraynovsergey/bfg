@@ -1,0 +1,42 @@
+.btn {
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	border-bottom: 1px solid $color_black;
+	display: flex;
+	text-decoration: none;
+	align-items: center;
+	justify-content: space-between;
+
+	@media (max-width: 1250px) {
+		font-size: 1rem;
+	}
+
+	@media (max-width: 991px) {
+		padding-bottom: 5px;
+	}
+
+	& svg {
+		margin-left: 60px;
+
+		@media (max-width: 575px) {
+			margin-left: 30px;
+		}
+	}
+
+	&__text {
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__title {
+		white-space: nowrap;
+
+		&._title2 {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}

@@ -1,0 +1,85 @@
+doctype html
+block html
+html(lang="ru")
+    head
+        block seo
+            - var seo = {title: 'Портфолио', description: '', keywords: ''}
+        include includes/_meta
+    body
+        style(type="text/css").
+            /* После переноса на прод - удалить */
+            .header {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                height: 89px;
+                background: #000;
+                z-index: 10;
+            }
+            .footer {
+                width: 100%;
+                height: 353px;
+                background: #000;
+            }
+
+        header.header(role="banner")
+
+        main.main(role="main")
+            .container
+                .portfolio__intro
+                    h1.portfolio__h1.h1(role="heading") Портфолио
+                    .portfolio__intro-btns
+                        button.portfolio__intro-btn.btn(type="button" role="button")
+                            span.btn__text
+                                span.btn__title._title1 Индустрия
+                                span.btn__title._title2 Индустрия
+                            svg(width="42" height="8")
+                                use(xlink:href="img/sprite.svg#btn-arrow")
+                        button.portfolio__intro-btn.btn(type="button" role="button")
+                            span.btn__text
+                                span.btn__title._title1 Тип проекта
+                                span.btn__title._title2 Тип проекта
+                            svg(width="42" height="8")
+                                use(xlink:href="img/sprite.svg#btn-arrow")
+
+                mixin portfolio(img, width, height, title, intro)
+                    article.portfolio__item(role="article")
+                        a.portfolio__item-img(href="#" role="link")
+                            picture
+                                source(type="image/webp" data-srcset="img/tmp/webp/"+img+"@2x.webp 2x, img/tmp/webp/"+img+".webp 1x")
+                                source(type="image/jpeg" data-srcset="img/tmp/"+img+"@2x.jpg 2x, img/tmp/"+img+".jpg 1x")
+                                img.lazy(data-src="img/tmp/"+img+".jpg" alt= title width= width height= height)
+                            .portfolio__item-click Lets Click.
+                        .portfolio__item-content
+                            h3.portfolio__item-title
+                                a.portfolio__item-link(href="#" role="link")= title
+                            p.portfolio__item-intro= intro
+
+                .portfolio__cols
+                    .portfolio__col._w60._small._right
+                        +portfolio('portfolio-1', 613, 613, 'Polaris', 'Производство бытовой техники мирового уровня. Бренд является лауреатом премии доверия потребителей «Народная Марка– Марка № 1 в России».')
+                    .portfolio__col._w40._big._right
+                        +portfolio('portfolio-2', 772, 772, 'Pilkington', 'Мировой лидер по производству стекла для окон и фасадов, основанный в 1826 году в Великобритании.')
+                    .portfolio__col._w50._big._left
+                        +portfolio('portfolio-3', 772, 772, 'KeniGo', 'Проект, реализуемый на территории Калининградской области, направленный на популяризацию исторического наследия в регионе.')
+                    .portfolio__col._w50._small._left
+                        +portfolio('portfolio-4', 613, 613, 'Lokotrack', 'Компания занимается поставкой и обслуживанием дробильно-ортировочного оборудования, дорожно-строительной техники и технологий, асфальтобетонных заводов.')
+                    .portfolio__col._w50._small._right
+                        +portfolio('portfolio-5', 613, 613, 'Бюро переводов Мартин', 'Крупная переводческая компания. На рынке с 2016 года.')
+                    .portfolio__col._w50._big._left
+                        +portfolio('portfolio-6', 772, 772, 'Биодинамика', 'Воздействие на здоровье пациента путем нетрадиционных биоэнергетических методов.')
+                    .portfolio__col._w50._big._right
+                        +portfolio('portfolio-7', 772, 772, 'Вокруг Жека', 'Журнал рассказает о жизни людей в большом городе, о мировых трендах урбанистики и архитектурных новациях.')
+                    .portfolio__col._w50._small._center
+                        +portfolio('portfolio-8', 613, 613, 'Okno-audio', 'Компания занимается поставкой и обслуживанием дробильно-ортировочного оборудования, дорожно-строительной техники и технологий, асфальтобетонных заводов.')
+
+                button.portfolio__more.btn(type="button" role="button")
+                    span.btn__text
+                        span.btn__title._title1 Смотреть еще
+                        span.btn__title._title2 Смотреть еще
+                    svg(width="42" height="8")
+                        use(xlink:href="img/sprite.svg#btn-arrow")
+
+        footer.footer(role="contentinfo")
+
+        include includes/_scripts
