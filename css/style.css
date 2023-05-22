@@ -547,7 +547,7 @@ h1,
     .portfolio__item-img img {
       max-width: 100%;
       height: auto;
-      transition: 2.5s ease !important; }
+      transition: 1.25s ease !important; }
       .portfolio__item-img img[data-aos="animate-img"] {
         transform: scale(0.8);
         opacity: .5; }
