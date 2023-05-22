@@ -1,7 +1,11 @@
 (function() {
 	'use strict';
 
-	const lazyLoadInstance = new LazyLoad();
+	AOS.init({
+		offset: 300,
+		delay: 1000,
+		once: true
+	});
 
 	const portfolioItemsImg = document.querySelectorAll('.portfolio__item-img');
 	if ( portfolioItemsImg.length > 0 ) {

@@ -537,7 +537,7 @@ h1,
   display: flex;
   flex-direction: column; }
   .portfolio__item:hover .portfolio__item-img img {
-    transform: scale(1.2); }
+    transform: scale(1.2) !important; }
   .portfolio__item-img {
     position: relative;
     overflow: hidden;
@@ -546,7 +546,13 @@ h1,
     .portfolio__item-img img {
       max-width: 100%;
       height: auto;
-      transition: 2s ease; }
+      transition: 2.5s ease !important; }
+      .portfolio__item-img img[data-aos="animate-img"] {
+        transform: scale(0);
+        opacity: 0; }
+        .portfolio__item-img img[data-aos="animate-img"].aos-animate {
+          opacity: 1;
+          transform: scale(1); }
     .portfolio__item-img:hover {
       color: inherit; }
       @media (min-width: 992px) {

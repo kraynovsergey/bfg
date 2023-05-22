@@ -135,7 +135,7 @@
 		&:hover {
 			& .portfolio__item-img {
 				& img {
-					transform: scale(1.2);
+					transform: scale(1.2) !important;
 				}
 			}
 		}
@@ -149,7 +149,17 @@
 			& img {
 				max-width: 100%;
 				height: auto;
-				transition: 2s ease;
+				transition: 2.5s ease !important;
+
+				&[data-aos="animate-img"] {
+					transform: scale(0);
+					opacity: 0;
+
+					&.aos-animate {
+						opacity: 1;
+						transform: scale(1);
+					}
+				}
 			}
 
 			&:hover {

@@ -46,9 +46,9 @@ html(lang="ru")
                     article.portfolio__item(role="article")
                         a.portfolio__item-img(href="#" role="link")
                             picture
-                                source(type="image/webp" data-srcset="img/tmp/webp/"+img+"@2x.webp 2x, img/tmp/webp/"+img+".webp 1x")
-                                source(type="image/jpeg" data-srcset="img/tmp/"+img+"@2x.jpg 2x, img/tmp/"+img+".jpg 1x")
-                                img.lazy(data-src="img/tmp/"+img+".jpg" alt= title width= width height= height)
+                                source(type="image/webp" srcset="img/tmp/webp/"+img+"@2x.webp 2x, img/tmp/webp/"+img+".webp 1x")
+                                source(type="image/jpeg" srcset="img/tmp/"+img+"@2x.jpg 2x, img/tmp/"+img+".jpg 1x")
+                                img.lazy(data-aos="animate-img" src="img/tmp/"+img+".jpg" alt= title width= width height= height)
                             .portfolio__item-click Lets Click.
                         .portfolio__item-content
                             h3.portfolio__item-title
