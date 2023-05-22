@@ -49,7 +49,7 @@ html(lang="ru")
                                 source(type="image/webp" srcset="img/tmp/webp/"+img+"@2x.webp 2x, img/tmp/webp/"+img+".webp 1x")
                                 source(type="image/jpeg" srcset="img/tmp/"+img+"@2x.jpg 2x, img/tmp/"+img+".jpg 1x")
                                 img.lazy(data-aos="animate-img" src="img/tmp/"+img+".jpg" alt= title width= width height= height)
-                            .portfolio__item-click Lets Click.
+                            //.portfolio__item-click Lets Click.
                         .portfolio__item-content
                             h3.portfolio__item-title
                                 a.portfolio__item-link(href="#" role="link")= title
@@ -79,6 +79,9 @@ html(lang="ru")
                         span.btn__title._title2 Смотреть еще
                     svg(width="42" height="8")
                         use(xlink:href="img/sprite.svg#btn-arrow")
+
+        .portfolio__item-click
+        .portfolio__item-click-follower Lets Click.
 
         footer.footer(role="contentinfo")
 

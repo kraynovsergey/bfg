@@ -51,6 +51,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -10px -70px;
+		overflow: hidden;
 
 		@media (max-width: 991px) {
 			margin-bottom: -50px;
@@ -161,16 +162,6 @@
 					}
 				}
 			}
-
-			&:hover {
-				color: inherit;
-
-				& .portfolio__item-click {
-					@media (min-width: 992px) {
-						opacity: 1;
-					}
-				}
-			}
 		}
 
 		&-content {
@@ -222,17 +213,28 @@
 		}
 
 		&-click {
-			width: 60px;
-			height: 60px;
-			padding: 9px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			position: absolute;
-			background: $color_white;
-			opacity: 0;
-			transition: $transition;
-			animation: pulse 1s ease infinite;
+			&-follower {
+				width: 60px;
+				height: 60px;
+				padding: 9px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				background: $color_white;
+				opacity: 0;
+				pointer-events: none;
+				animation: pulse 1s ease infinite;
+				z-index: 10;
+				transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+				0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+
+				&._active {
+					@media (min-width: 992px) {
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 

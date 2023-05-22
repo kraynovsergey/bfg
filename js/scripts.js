@@ -7,17 +7,45 @@
 		once: true
 	});
 
-	const portfolioItemsImg = document.querySelectorAll('.portfolio__item-img');
-	if ( portfolioItemsImg.length > 0 ) {
-		portfolioItemsImg.forEach(item => {
-			let cl = item.querySelector('.portfolio__item-click')
-			if ( cl ) {
-				item.addEventListener('mousemove', (e) => {
-					let rect = e.target.getBoundingClientRect();
-					cl.style.left = e.clientX - rect.left - 60 + 'px';
-					cl.style.top = e.clientY - rect.top - 60 + 'px';
-				});
-			}
+	const portfolioClick = document.querySelector('.portfolio__item-click'),
+		portfolioClickFollower = document.querySelector(".portfolio__item-click-follower");
+	if ( portfolioClick && portfolioClickFollower ) {
+		let imgs = document.querySelectorAll(".portfolio__item-img"),
+			posX = 0,
+			posY = 0,
+			mouseX = 0,
+			mouseY = 0;
+
+		setInterval(function () {
+			posX += (mouseX - posX) / 9;
+			posY += (mouseY - posY) / 9;
+			TweenMax.set(portfolioClickFollower, {
+				css: {
+					left: posX - 20,
+					top: posY - 20
+				}
+			});
+			TweenMax.set(portfolioClick, {
+				css: {
+					left: mouseX,
+					top: mouseY
+				}
+			});
+
+		}, 15);
+
+		document.querySelector('body').addEventListener('mousemove', e => {
+			mouseX = e.pageX;
+			mouseY = e.pageY;
+		});
+
+		imgs.forEach(function(elem, index){
+			elem.addEventListener('mouseenter', e => {
+				portfolioClickFollower.classList.add('_active');
+			});
+			elem.addEventListener('mouseleave', e => {
+				portfolioClickFollower.classList.remove('_active');
+			});
 		});
 	}
 
