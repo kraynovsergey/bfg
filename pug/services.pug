@@ -1,0 +1,149 @@
+extends base
+
+block seo
+    - var seo = {title: 'Услуги', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        .container
+            h1.services__h1.h1(role="heading") Услуги
+            p.services__subtitle По разработке программного обеспечения в веб-среде
+
+            .services__items
+                article.services__item(role="article" data-item="1")
+                    .services__item-col._plus
+                        button.services__item-plus(type="button" role="button")
+                    .services__item-col._content
+                        h2.services__item-title(role="heading") Корпоративный сайт
+                        .services__item-content
+                            p.services__item-intro Видео ролики нового формата интереснее 90% фильмов, которые вы смотрели. Важное отличие в том, что они не похожи на рекламу. Зрителю это нравится.
+                            p.services__item-intro._note Стоимость: от 280 000 рублей
+                            a.services__item-link(href="#" role="link")
+                                .services__item-link-circle
+                                span Смотреть
+                    .services__item-col._counter
+                        .services__item-counter 01
+
+                article.services__item(role="article" data-item="2")
+                    .services__item-col._plus
+                        button.services__item-plus(type="button" role="button")
+                    .services__item-col._content
+                        h2.services__item-title(role="heading") Интернет-магазины
+                        .services__item-content
+                            p.services__item-intro Одностраничные сайты разрабатываются для продажи или презентации одной или нескольких товаров или услуг. Максимально эффективны для агрессивных рекламных компаний. Не подходят для органического SEO-продвижения в поисковых системах.
+                    .services__item-col._counter
+                        .services__item-counter 02
+
+                article.services__item(role="article" data-item="3")
+                    .services__item-col._plus
+                        button.services__item-plus(type="button" role="button")
+                    .services__item-col._content
+                        h2.services__item-title(role="heading") Продающие лендинги
+                        .services__item-content
+                            p.services__item-intro Одностраничные сайты разрабатываются для продажи или презентации одной или нескольких товаров или услуг. Максимально эффективны для агрессивных рекламных компаний. Не подходят для органического SEO-продвижения в поисковых системах.
+                            p.services__item-intro._note Стоимость: от 280 000 рублей
+                            a.services__item-link(href="#" role="link")
+                                .services__item-link-circle
+                                span Смотреть
+                    .services__item-col._counter
+                        .services__item-counter 03
+
+                article.services__item(role="article" data-item="4")
+                    .services__item-col._plus
+                        button.services__item-plus(type="button" role="button")
+                    .services__item-col._content
+                        h2.services__item-title(role="heading") Веб-приложения
+                        .services__item-content
+                            p.services__item-intro Одностраничные сайты разрабатываются для продажи или презентации одной или нескольких товаров или услуг. Максимально эффективны для агрессивных рекламных компаний. Не подходят для органического SEO-продвижения в поисковых системах.
+                    .services__item-col._counter
+                        .services__item-counter 04
+
+                article.services__item(role="article" data-item="5")
+                    .services__item-col._plus
+                        button.services__item-plus(type="button" role="button")
+                    .services__item-col._content
+                        h2.services__item-title(role="heading") Видео-ролики
+                        .services__item-content
+                            p.services__item-intro Одностраничные сайты разрабатываются для продажи или презентации одной или нескольких товаров или услуг. Максимально эффективны для агрессивных рекламных компаний. Не подходят для органического SEO-продвижения в поисковых системах.
+                            p.services__item-intro._note Стоимость: от 280 000 рублей
+                            a.services__item-link(href="#" role="link")
+                                .services__item-link-circle
+                                span Смотреть
+                    .services__item-col._counter
+                        .services__item-counter 05
+
+    .portfolio__item-click
+    .portfolio__item-click-follower.services__follower
+        .services__follower-carousel
+            .services__follower-swiper.swiper(data-item="1")
+                .swiper-wrapper
+                    .swiper-slide
+                        .services__follower-caption Корпоративный сайт 1
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/services-slide@2x.webp 2x, img/tmp/webp/services-slide.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/services-slide@2x.jpg 2x, img/tmp/services-slide.jpg 1x")
+                            img(src="img/tmp/services-slide.jpg" alt="" width="450" height="450")
+                    .swiper-slide
+                        .services__follower-caption Корпоративный сайт 2
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/services-slide@2x.webp 2x, img/tmp/webp/services-slide.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/services-slide@2x.jpg 2x, img/tmp/services-slide.jpg 1x")
+                            img(src="img/tmp/services-slide.jpg" alt="" width="450" height="450")
+            .services__follower-swiper.swiper(data-item="2")
+                .swiper-wrapper
+                    .swiper-slide
+                        .services__follower-caption Интернет-магазины 1
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/services-slide@2x.webp 2x, img/tmp/webp/services-slide.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/services-slide@2x.jpg 2x, img/tmp/services-slide.jpg 1x")
+                            img(src="img/tmp/services-slide.jpg" alt="" width="450" height="450")
+                    .swiper-slide
+                        .services__follower-caption Интернет-магазины 2
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/services-slide@2x.webp 2x, img/tmp/webp/services-slide.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/services-slide@2x.jpg 2x, img/tmp/services-slide.jpg 1x")
+                            img(src="img/tmp/services-slide.jpg" alt="" width="450" height="450")
+            .services__follower-swiper.swiper(data-item="3")
+                .swiper-wrapper
+                    .swiper-slide
+                        .services__follower-caption Продающие лендинги 1
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/services-slide@2x.webp 2x, img/tmp/webp/services-slide.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/services-slide@2x.jpg 2x, img/tmp/services-slide.jpg 1x")
+                            img(src="img/tmp/services-slide.jpg" alt="" width="450" height="450")
+                    .swiper-slide
+                        .services__follower-caption Продающие лендинги 2
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/services-slide@2x.webp 2x, img/tmp/webp/services-slide.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/services-slide@2x.jpg 2x, img/tmp/services-slide.jpg 1x")
+                            img(src="img/tmp/services-slide.jpg" alt="" width="450" height="450")
+            .services__follower-swiper.swiper(data-item="4")
+                .swiper-wrapper
+                    .swiper-slide
+                        .services__follower-caption Веб-приложения 1
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/services-slide@2x.webp 2x, img/tmp/webp/services-slide.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/services-slide@2x.jpg 2x, img/tmp/services-slide.jpg 1x")
+                            img(src="img/tmp/services-slide.jpg" alt="" width="450" height="450")
+                    .swiper-slide
+                        .services__follower-caption Веб-приложения 2
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/services-slide@2x.webp 2x, img/tmp/webp/services-slide.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/services-slide@2x.jpg 2x, img/tmp/services-slide.jpg 1x")
+                            img(src="img/tmp/services-slide.jpg" alt="" width="450" height="450")
+            .services__follower-swiper.swiper(data-item="5")
+                .swiper-wrapper
+                    .swiper-slide
+                        .services__follower-caption Видео-ролики 1
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/services-slide@2x.webp 2x, img/tmp/webp/services-slide.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/services-slide@2x.jpg 2x, img/tmp/services-slide.jpg 1x")
+                            img(src="img/tmp/services-slide.jpg" alt="" width="450" height="450")
+                    .swiper-slide
+                        .services__follower-caption Видео-ролики 2
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/services-slide@2x.webp 2x, img/tmp/webp/services-slide.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/services-slide@2x.jpg 2x, img/tmp/services-slide.jpg 1x")
+                            img(src="img/tmp/services-slide.jpg" alt="" width="450" height="450")
+
+

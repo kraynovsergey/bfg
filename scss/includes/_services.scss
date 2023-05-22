@@ -1,0 +1,267 @@
+.services {
+	&__h1 {
+		margin-bottom: 20px;
+
+		@media (max-width: 991px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 2.25rem;
+		line-height: 110%;
+		max-width: 662px;
+		width: 100%;
+		margin: 0 0 30px;
+
+		@media (max-width: 991px) {
+			font-size: 1.14rem;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		padding: 60px 0 20px;
+		border-bottom: 1px solid #0F0F0F;
+		cursor: pointer;
+		color: #0F0F0F;
+		overflow: hidden;
+		background: $color_white;
+
+		@media (max-width: 991px) {
+			padding: 40px 0 10px;
+		}
+
+		&:hover {
+			& .services__item-plus {
+				opacity: 1;
+			}
+		}
+
+		&._active {
+			& .services__item-plus {
+				transform: rotate(45deg);
+				opacity: 1;
+			}
+		}
+
+		&-col {
+			display: flex;
+			flex-direction: column;
+			transition: .5s ease;
+
+			&._plus {
+				@media (max-width: 991px) {
+					display: none;
+				}
+			}
+
+			&._content {
+				width: 100%;
+				max-width: 656px;
+				padding: 0 30px;
+
+				@media (max-width: 991px) {
+					padding-left: 0;
+				}
+			}
+
+			&._plus {
+				justify-content: center;
+			}
+		}
+
+		&-plus {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 25px;
+			height: 25px;
+			position: relative;
+			opacity: 0;
+			transition: $transition;
+
+			&::after,
+			&::before {
+				content: '';
+				width: 25px;
+				height: 1px;
+				background: #0F0F0F;
+				position: absolute;
+			}
+
+			&::after {
+				transform: rotate(-90deg);
+			}
+		}
+
+		&-counter {
+			font-size: 3rem;
+			line-height: 100%;
+			padding-right: 10px;
+
+			@media (max-width: 991px) {
+				font-size: 1.53rem;
+				font-weight: 700;
+			}
+		}
+
+		&-title {
+			font-size: 3rem;
+			line-height: 110%;
+			margin: 0;
+			padding: 0;
+			font-weight: 400;
+
+			@media (max-width: 991px) {
+				font-size: 1.53rem;
+				font-weight: 500;
+			}
+		}
+
+		&-content {
+			display: none;
+			flex-direction: column;
+			align-items: flex-start;
+			margin: 15px -65px 15px 0;
+		}
+
+		&-intro {
+			font-size: 1.25rem;
+			margin: 0 0 15px;
+
+			@media (max-width: 991px) {
+				font-size: 1.06rem;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&._note {
+				opacity: .7;
+			}
+		}
+
+		&-link {
+			height: 50px;
+			border: 1px solid #0F0F0F;
+			border-radius: 30px;
+			padding: 0 30px;
+			min-width: 218px;
+			max-width: 218px;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: inherit;
+			margin: 25px 0 0;
+			position: relative;
+			overflow: hidden;
+
+			@media (max-width: 575px) {
+				min-width: 100%;
+				max-width: 100%;
+			}
+
+			&:hover {
+				color: inherit;
+			}
+
+			& span {
+				position: relative;
+				z-index: 2;
+				transition: .5s ease;
+			}
+
+			&-circle {
+				border-radius: 100px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 0;
+				height: 0;
+				pointer-events: none;
+				z-index: 1;
+
+				@media (min-width: 992px) {
+					&.explode-circle {
+						animation: explode-white-border-btn2 0.5s forwards;
+
+						& + span {
+							color: $color_white;
+						}
+					}
+
+					&.desplode-circle {
+						animation: desplode-white-border-btn2 0.5s forwards;
+					}
+				}
+			}
+		}
+	}
+
+	@keyframes explode-white-border-btn2 {
+		0% {
+			width: 0px;
+			height: 0px;
+			margin-left: 0px;
+			margin-top: 0px;
+			background-color: #0f0f0f;
+		}
+		100% {
+			width: 600px;
+			height: 600px;
+			margin-left: -300px;
+			margin-top: -300px;
+			background-color: #0f0f0f;
+		}
+	}
+	@keyframes desplode-white-border-btn2 {
+		0% {
+			width: 600px;
+			height: 600px;
+			margin-left: -300px;
+			margin-top: -300px;
+			background-color: #0f0f0f;
+		}
+		100% {
+			width: 0px;
+			height: 0px;
+			margin-left: 0px;
+			margin-top: 0px;
+			background-color: #0f0f0f;
+		}
+	}
+
+	&__follower {
+
+		&-carousel {
+			transform: rotate(-20deg);
+			position: relative;
+			left: 200px;
+			top: -100px;
+		}
+
+		&-swiper {
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			transition: .5s ease;
+			width: 450px;
+			height: 450px;
+
+			&._active {
+				opacity: 1;
+			}
+		}
+	}
+}
