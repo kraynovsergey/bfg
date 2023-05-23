@@ -120,7 +120,7 @@
 		servicesItems.forEach(item => {
 			$(item).on( "click", function() {
 				item.classList.toggle('_active');
-				$(this).find('.services__item-content').slideToggle('fast');
+				$(this).find('.services__item-content').slideToggle('1500');
 			});
 		});
 	}
