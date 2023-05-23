@@ -38,12 +38,6 @@
 			padding: 40px 0 10px;
 		}
 
-		&:hover {
-			& .services__item-plus {
-				opacity: 1;
-			}
-		}
-
 		&._active {
 			& .services__item-plus {
 				transform: rotate(45deg);
@@ -84,7 +78,7 @@
 			width: 25px;
 			height: 25px;
 			position: relative;
-			opacity: 0;
+			opacity: 1;
 			transition: $transition;
 
 			&::after,

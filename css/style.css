@@ -658,8 +658,6 @@ h1,
   @media (max-width: 991px) {
     .services__item {
       padding: 40px 0 10px; } }
-  .services__item:hover .services__item-plus {
-    opacity: 1; }
   .services__item._active .services__item-plus {
     transform: rotate(45deg);
     opacity: 1; }
@@ -686,7 +684,7 @@ h1,
     width: 25px;
     height: 25px;
     position: relative;
-    opacity: 0;
+    opacity: 1;
     transition: 0.5s ease; }
     .services__item-plus::after, .services__item-plus::before {
       content: '';
