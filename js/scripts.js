@@ -3,7 +3,7 @@
 
 	AOS.init({
 		offset: 300,
-		delay: 1000,
+		delay: 500,
 		once: true
 	});
 
@@ -120,7 +120,7 @@
 		servicesItems.forEach(item => {
 			$(item).on( "click", function() {
 				item.classList.toggle('_active');
-				$(this).find('.services__item-content').slideToggle('slow');
+				$(this).find('.services__item-content').slideToggle('fast');
 			});
 		});
 	}
