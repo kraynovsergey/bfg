@@ -2,7 +2,7 @@
 	'use strict';
 
 	AOS.init({
-		offset: 300,
+		offset: 150,
 		delay: 500,
 		once: true
 	});
