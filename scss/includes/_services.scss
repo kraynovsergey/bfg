@@ -236,6 +236,9 @@
 	}
 
 	&__follower {
+		@media (max-width: 991px) {
+			display: none !important;
+		}
 
 		&-carousel {
 			transform: rotate(-20deg);
